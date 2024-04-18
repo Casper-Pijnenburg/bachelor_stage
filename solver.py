@@ -416,7 +416,7 @@ def solve(eps, rho, u_init, x, y, z, solver = 'bicgstab', tol = 1e-5, MAX_ITER =
 
         start = time.perf_counter()
         # Solves the system using bigstab
-        x, status, iterations = ScipySolve(A, b, x0, tol, MAX_ITER, P, callback)
+        x, status, iterations = ScipySolve(A, b, x0, tol, int(MAX_ITER), P, callback)
         end = time.perf_counter()
 
         if status > 0:
